@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>FAQs</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/footers/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    ">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
+    "></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;700&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    body {
+      font-family: 'Urbanist';
+      "sans-serif";
+
+      background-color: #14141f;
+    }
+
+    .main1 {
+      background-image: url(background.jpg);
+
+      background-position: center bottom;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .navbar {
+      font-size: 18px;
+      padding: 0px 50px;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      font-size: 18px;
+      padding: 0px 50px;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    span.navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    button.navbar-toggler {
+      border: none;
+    }
+
+    footer {
+
+      background-color: #0D0D11;
+      padding: 0px 50px;
+      color: white;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: #5142FC;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5142FC;
+      transition: 0.3s;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .search-container {
+      position: relative;
+      box-sizing: border-box;
+      width: fit-content;
+    }
+
+    .search-mainbox {
+      box-sizing: border-box;
+      position: relative;
+      width: 230px;
+      height: 40px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      border-radius: 160px;
+      background-color: rgb(0, 0, 0);
+      transition: all 0.3s ease;
+    }
+
+    .search-checkbox:focus {
+      border: none;
+      outline: none;
+    }
+
+    .search-checkbox:checked {
+      right: 10px;
+    }
+
+    .search-checkbox:checked~.search-mainbox {
+      width: 50px;
+    }
+
+    .search-checkbox:checked~.search-mainbox .search_input {
+      width: 0;
+      height: 0px;
+    }
+
+    .search-checkbox:checked~.search-mainbox .search-iconContainer {
+      padding-right: 8px;
+    }
+
+    .search-checkbox {
+      box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 17px;
+      top: 10px;
+      z-index: 9;
+      cursor: pointer;
+      appearance: none;
+    }
+
+    .search_input {
+      box-sizing: border-box;
+      height: 100%;
+      width: 170px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      font-size: 1em;
+      color: white;
+      transition: all 0.3s ease;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .search_input::placeholder {
+      color: rgba(255, 255, 255, 0.776);
+    }
+
+    .search-iconContainer {
+      box-sizing: border-box;
+      padding-top: 5px;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .search_icon {
+      box-sizing: border-box;
+      fill: white;
+      font-size: 1.3em;
+    }
+
+    .inputsubs {
+      min-height: 50px;
+      max-width: 180px;
+      padding: 0 1rem;
+      color: #fff;
+      font-size: 15px;
+      border: 1px solid #5e4dcd;
+      border-radius: 12px 0 0 12px;
+      background-color: transparent;
+    }
+
+    .button--submitsubs {
+      min-height: 50px;
+      padding: .5em 1em;
+      border: none;
+      border-radius: 0 12px 12px 0;
+      background-color: #5e4dcd;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color .3s ease-in-out;
+    }
+
+
+    .register {
+      background: transparent none repeat scroll 0 0;
+      color: white;
+      border: 3px solid #5142fc;
+
+    }
+
+    .register:hover {
+
+      transition: 1s;
+      border: 3px solid white;
+      background-color: white;
+      color: #5142fc;
+    }
+
+    .social-link {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      border-radius: 50%;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .social-link:hover,
+    .social-link:focus {
+      background: #ddd;
+      text-decoration: none;
+      color: #555;
+    }
+
+    .accordion-body {
+      color: white;
+      background-color: #343444;
+    }
+
+    .accordion-button {
+      border: 1px solid white;
+      color: white;
+      background-color: #343444;
+    }
+
+    .breadcrmub a:hover {
+      color: #ffffff;
+      transition: all 0.3s;
+    }
+    .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #14141f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+}
+.loading-wave {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+ justify-content: center;
+padding-top: 0vh;
+margin: 0 auto;
+
+}
+
+.loading-bar {
+  width: 20px;
+  height: 50px;
+  margin: 0 5px;
+  background-color: #5142FC;
+  border-radius: 5px;
+  animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loading-wave-animation {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 50px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+  </style>
+
+
+</head>
+
+<body>
+  <nav class="navbar  navbar-expand-lg" style="background-color: #00000053;">
+    <a class="navbar-brand" href="index.html"><img src="opensea.png" width="150px" height="65px" alt="" srcset=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ps-4">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item ps-4">
+          <a class="nav-link" href="marketplace.html">MarketPlace</a>
+        </li>
+        <li class="nav-item ps-4">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item ps-4">
+          <a class="nav-link" href="contactus.html">Contact Us</a>
+        </li>
+
+
+      </ul>
+
+
+      <li class="searchandregister d-flex align-items-center" style="list-style: none;">
+        <!-- <i class="fa-solid me-3 fa-magnifying-glass ps-4 col-12 col-md-auto"></i> -->
+        <div class="search-container">
+          <input checked="" class="search-checkbox" type="checkbox">
+          <div class="search-mainbox">
+            <div class="search-iconContainer">
+              <svg viewBox="0 0 512 512" height="1.2em" xmlns="http://www.w3.org/2000/svg" class="search_icon pb-1">
+                <path
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                </path>
+              </svg>
+            </div>
+            <input class="search_input" placeholder="search" type="text">
+          </div>
+        </div>
+        <a href="signup.html" class="btn register rounded-pill ms-2"><i class="fa-solid fa-user"></i> &nbsp;Register
+          Now</a>
+
+
+
+      </li>
+
+    </div>
+
+    </div>
+  </nav>
+  <main style="padding-top: 140px; padding-bottom: 50px;" class="main1 text-center ">
+    <div>
+      <h2 style="font-size: 60px; color: white;">Frequently Asked Questions</h2>
+    </div>
+    <div class="breadcrmub">
+      <a style="text-decoration: none;" href="index.html">Home</a>&nbsp;<svg fill="#ffffff" width="15px" height="15px"
+        viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M 13.8320 43.5625 C 14.4883 43.5625 14.9336 43.3516 15.4258 43.1172 L 41.7695 31.2813 C 43.1055 30.6484 44.1602 29.6172 44.1602 28.1172 C 44.1602 26.6406 43.1289 25.5625 41.7461 24.9532 L 15.4258 12.8359 C 14.9570 12.6016 14.5351 12.4375 13.9258 12.4375 C 12.7070 12.4375 11.8398 13.2813 11.8398 14.5235 C 11.8398 15.6016 12.4023 16.2110 13.3867 16.6797 L 38.6055 27.8125 L 38.6055 28.0703 L 13.3867 39.2969 C 12.4023 39.7656 11.8398 40.3750 11.8398 41.4531 C 11.8398 42.7422 12.6836 43.5625 13.8320 43.5625 Z">
+          </path>
+        </g>
+      </svg>
+      <a style="color: #ffffff; text-decoration: none; cursor: text;" href="#">FAQs</a>
+    </div>
+
+
+  </main>
+
+  <main class="container">
+    <div class="mt-5 text-center">
+      <h1 class="mb-3" style="color: white;">Frequently Asked Questions</h1>
+
+    </div>
+
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+      <div class="accordion-item mt-5 mb-4 ">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            What is an NFT?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            An NFT, or Non-Fungible Token, is a unique digital asset that represents ownership or proof of authenticity
+            of a specific item or piece of content. Unlike cryptocurrencies such as Bitcoin or Ethereum, which are
+            fungible and can be exchanged on a one-to-one basis, each NFT has distinct properties and cannot be
+            replicated.
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4 ">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            How does buying and selling NFTs work?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Buying and selling NFTs typically involves using a digital wallet to connect to an NFT marketplace. Users
+            can browse available NFTs, place bids or make purchases directly on the platform. Sellers can list their
+            NFTs for sale, set a price or auction, and transfer ownership upon successful purchase.
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            What can I buy and sell on this platform? </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Our platform supports a wide range of digital assets, including digital artwork, collectibles, virtual real
+            estate, domain names, and more. Users can explore various categories to discover unique and valuable NFTs
+            from creators around the world.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            What blockchain does your platform use? </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Our platform utilizes the Ethereum blockchain, which is one of the most widely adopted blockchains for NFTs
+            due to its smart contract capabilities and established ecosystem of decentralized applications (dApps) and
+            wallets.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            How do I store and manage my NFTs? </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            You can store and manage your NFTs using compatible digital wallets that support Ethereum-based tokens.
+            Popular options include MetaMask, Trust Wallet, and MyEtherWallet. Simply connect your wallet to our
+            platform to view and manage your NFT collection securely.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            What are the fees associated with buying and selling NFTs?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Our platform charges a transaction fee of X% for each NFT sale, which covers the cost of hosting,
+            maintenance, and development. Additionally, users may incur gas fees, which are required to process
+            transactions on the Ethereum blockchain and vary based on network congestion and transaction complexity.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            Is there a verification process for NFT creators?
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, we conduct a thorough verification process for NFT creators to ensure the authenticity and originality
+            of their creations. This may include verifying identity, reviewing past work, and confirming ownership
+            rights to the content being minted as NFTs.
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            What happens if there's a dispute or issue with a transaction?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            In the event of a dispute or issue with a transaction, our platform offers a resolution process mediated by
+            our support team. Users can submit a support ticket detailing the problem, and we will investigate and work
+            towards a fair resolution, which may include refunds, arbitration, or mediation.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-4">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            Are there any legal considerations I should be aware of?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, it's essential to be aware of the legal implications of buying, selling, and owning NFTs, including
+            copyright and intellectual property rights, tax obligations, and regulatory compliance. We recommend
+            consulting with legal professionals familiar with blockchain and digital assets for personalized guidance.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item mb-5">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            How can I get in touch with customer support?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            You can reach our customer support team via email at support@nftmarketplace.com or through our live chat
+            feature available on our website. Our support team is available X hours a day, X days a week, and we strive
+            to respond to inquiries promptly to assist you with any questions or concerns.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-12 col-md-3 mb-3">
+        <a href="index.html">
+          <img src="opensea.png" alt="" width="150px" height="65px">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3 mb-3">
+        <h5> <strong>MarketPlace</strong></h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="marketplace.html" class="nav-link p-0 ">Art</a></li>
+          <li class="nav-item mb-2"><a href="marketplace.html" class="nav-link p-0 ">Gaming</a></li>
+          <li class="nav-item mb-2"><a href="marketplace.html" class="nav-link p-0 ">Memberships</a></li>
+          <li class="nav-item mb-2"><a href="marketplace.html" class="nav-link p-0 ">PFPs</a></li>
+          <li class="nav-item mb-2"><a href="marketplace.html" class="nav-link p-0 ">Photography</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3 mb-3">
+        <h5><strong>Company</strong></h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0">About</a></li>
+          <li class="nav-item mb-2"><a href="contactus.html" class="nav-link p-0">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Career</a></li>
+          <li class="nav-item mb-2"><a href="signup.html" class="nav-link p-0">Register Now</a></li>
+          <li class="nav-item mb-2"><a href="login.html" class="nav-link p-0">Login</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3  mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <br>
+
+          <div class="input-group">
+            <input type="email" class="inputsubs" id="Email" name="Email" placeholder="info@yourmail.com"
+              autocomplete="off" required>
+            <input class="button--submitsubs" value="Subscribe" type="submit">
+          </div>
+        </form>
+        <ul class="list-unstyled d-flex mt-3">
+          <li class=""><a class="link-body-emphasis" href="https://twitter.com/opensea">
+
+              <button type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-twitter-x" viewBox="0 0 16 16">
+                  <path
+                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z">
+                  </path>
+                </svg>
+
+              </button>
+
+            </a></li>
+
+
+          <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/opensea/"><button type="button"
+                class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                  </path>
+                </svg>
+              </button>
+            </a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/projectopensea/"><button
+                type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951">
+                  </path>
+                </svg>
+              </button></a></li>
+
+          <li class="ms-3"><a class="link-body-emphasis" href="https://www.youtube.com/c/OpenSeaTV">
+              <button type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z">
+                  </path>
+                </svg>
+              </button>
+            </a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="https://discord.com/invite/opensea">
+              <button type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8">
+                  </path>
+                </svg>
+              </button>
+            </a></li>
+
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+  <div class="loader" id="loader">
+    <div class="loading-wave" id="loaderCard">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+    </div>
+  </div>
+  </div>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const loader = document.getElementById("loader");
+  
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 1500); // 3000 milliseconds = 3 seconds
+  });
+  </script>
+</body>
+
+</html>
